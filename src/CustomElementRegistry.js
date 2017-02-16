@@ -61,7 +61,7 @@ export default class CustomElementRegistry {
    * @param {!Function} constructor
    */
   define(localName, constructor) {
-    if (!(constructor instanceof Function)) {
+    if (!(Utilities.isFunction(constructor))) {
       throw new TypeError('Custom element constructors must be functions.');
     }
 

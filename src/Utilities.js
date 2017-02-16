@@ -127,3 +127,13 @@ export function walkDeepDescendantElements(root, callback, visitedImports = new 
 export function setPropertyUnchecked(destination, name, value) {
   destination[name] = value;
 }
+
+/**
+ * Check if a constructor is a Function
+ * @param  {Function}  functionToCheck
+ * @return {Boolean} true if it's a function, false otherwise
+ */
+export function isFunction(functionToCheck) {
+ var getType = {};
+ return functionToCheck && (getType.toString.call(functionToCheck) === '[object Function]');
+}
